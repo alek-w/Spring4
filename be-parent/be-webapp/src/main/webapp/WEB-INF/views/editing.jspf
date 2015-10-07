@@ -1,0 +1,36 @@
+<script type="text/javascript">
+
+    $(document).ready(function() {
+
+        $('#editAccountForm').submit(function(event) {
+
+            var id = $('#id').val();
+            var iban = $('#iban').val();
+            var bic = $('#bic').val();
+            var json = { "id" : id, "iban" : iban, "bic": bic};
+
+            $.ajax({
+                url: $("#editAccountForm").attr( "action"),
+                data: JSON.stringify(json),
+                type: "PUT",
+
+                beforeSend: function(xhr) {
+                    xhr.setRequestHeader("Accept", "application/json");
+                    xhr.setRequestHeader("Content-Type", "application/json");
+                },
+                success: function(account) {
+                    var respContent = "";
+
+                    respContent += "<span class='success'>Account has been changed: [";
+                    respContent += account.iban + " : " ;
+                    respContent += account.bic + "]</span>";
+
+                    $("#aAccountFromResponse").html(respContent);
+                }
+            });
+
+            event.preventDefault();
+        });
+
+    });
+</script>

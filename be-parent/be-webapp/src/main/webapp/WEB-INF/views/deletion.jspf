@@ -1,0 +1,30 @@
+<script type="text/javascript">
+
+    $(document).ready(function () {
+
+        var deleteLink = $("a:contains('Delete')");
+
+        $(deleteLink).click(function (event) {
+
+            $.ajax({
+                url: $(event.target).attr("href"),
+                type: "DELETE",
+
+                beforeSend: function (xhr) {
+                    xhr.setRequestHeader("Accept", "application/json");
+                    xhr.setRequestHeader("Content-Type", "application/json");
+                },
+
+                success: function (accaunt) {
+                    var rowToDelete = $(event.target).closest("tr");
+                    rowToDelete.remove();
+                    var respContent = "<span class='success'>entity was deleted.</span>";
+                    $("#accountFromResponse").html(respContent);
+                }
+            });
+
+            event.preventDefault();
+        });
+
+    });
+</script>
