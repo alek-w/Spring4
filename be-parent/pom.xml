@@ -35,7 +35,7 @@
         <jsp.version>2.2</jsp.version>
         <commons-lang.version>3.0</commons-lang.version>
         <log4j.version>1.2.17</log4j.version>
-        <junit.version>4.11</junit.version>
+        <junit.version>4.13.1</junit.version>
         <maven-compiler.version>3.1</maven-compiler.version>
         <maven-jetty.version>9.0.6.v20130930</maven-jetty.version>
         <maven-war-plugin.version>2.6</maven-war-plugin.version>
