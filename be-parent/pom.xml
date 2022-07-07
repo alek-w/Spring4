@@ -22,7 +22,7 @@
         <java-version>1.8</java-version>
         <org.aspectj-version>1.6.10</org.aspectj-version>
         <codehaus.jackson.version>1.9.13</codehaus.jackson.version>
-        <hibernate.validator.version>4.2.0.Final</hibernate.validator.version>
+        <hibernate.validator.version>6.0.23.Final</hibernate.validator.version>
         <hibernate.entitymanager.version>4.2.6.Final</hibernate.entitymanager.version>
         <org.springframework-version>4.1.5.RELEASE</org.springframework-version>
         <spring-data-jpa.version>1.6.0.RELEASE</spring-data-jpa.version>
